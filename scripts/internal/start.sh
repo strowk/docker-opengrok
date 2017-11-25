@@ -8,7 +8,7 @@ wait_for_opengrok_and_reindex(){
     while ! ( ps aux|grep -q org.apache.catalina.startup.Bootstrap ); do
         sleep 1;
     done
-    OpenGrok index /src
+    reindex.sh
 }
 
 wait_for_opengrok_and_reindex &

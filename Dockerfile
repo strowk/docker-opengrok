@@ -30,12 +30,12 @@ WORKDIR $CATALINA_HOME
 RUN /opengrok-${OPENGROK_RELEASE}/bin/OpenGrok deploy
 EXPOSE 8080
 
-ADD scripts /scripts
-RUN chmod +x /scripts/start.sh
-
+ADD scripts/internal/ /scripts
+ADD scripts/internal/ /scripts
+RUN find /scripts | grep -E '\.sh$' | xargs -r chmod +x
 RUN mkdir /src
 RUN mkdir /data
-
+ENV PATH /scripts:$PATH
 CMD ["/scripts/start.sh"]
 
 
