@@ -1,9 +1,9 @@
 #!/bin/bash
 
 
-if [ -f ~/bin/export-my-opegrok-settings.sh ] ; then
+if [ -f /etc/export-my-opegrok-settings.sh ] ; then
     echo "load preconfigured settings"
-    . export-my-opegrok-settings.sh
+    . /etc/export-my-opegrok-settings.sh
 fi
 
 echo "check required configuration"
