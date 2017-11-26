@@ -35,6 +35,9 @@ ADD scripts/internal/ /scripts
 RUN find /scripts | grep -E '\.sh$' | xargs -r chmod +x
 RUN mkdir /src
 RUN mkdir /data
+RUN mkdir /config
+ENV OPENGROK_READ_XML_CONFIGURATION /config/custom.xml
+
 ENV PATH /scripts:$PATH
 CMD ["/scripts/start.sh"]
 
