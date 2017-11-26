@@ -21,13 +21,13 @@ A few scripts in scripts/external are usable to manage containered OpenGrok:
 ```
 export SOURCES_FOR_OPENGROK_TO_INDEX=
 export OPENGROK_DATA_STORAGE=
-export OPENGROK_READ_XML_CONFIGURATION=
+export OPENGROK_CONFIGURATION_STORAGE=
 start-docker-opengrok.sh 
 ```
 starts OpenGrok in container, to run it you have to configure next variables:
  - SOURCES_FOR_OPENGROK_TO_INDEX - path to catalog where sources would be located
  - OPENGROK_DATA_STORAGE - path to catalog where OpenGrok would store it's data
- - [Optional] OPENGROK_READ_XML_CONFIGURATION - path to storage where custom.xml file would be created and could be used as [read only OpenGrok configuration](https://github.com/OpenGrok/OpenGrok/wiki/OpenGrok-Advanced-Configuration#read-only-configuration)
+ - [Optional] OPENGROK_CONFIGURATION_STORAGE - path to storage where custom.xml file would be created and could be used as [read only OpenGrok configuration](https://github.com/OpenGrok/OpenGrok/wiki/OpenGrok-Advanced-Configuration#read-only-configuration)
  ```
 safe-stop-docker-opengrok.sh 
 ```
