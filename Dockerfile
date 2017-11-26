@@ -31,7 +31,6 @@ RUN /opengrok-${OPENGROK_RELEASE}/bin/OpenGrok deploy
 EXPOSE 8080
 
 ADD scripts/internal/ /scripts
-ADD scripts/internal/ /scripts
 RUN find /scripts | grep -E '\.sh$' | xargs -r chmod +x
 RUN mkdir /src
 RUN mkdir /data
